@@ -1,0 +1,37 @@
+# Create a new User
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "admin@admin.com",
+  "password": "admin123",
+  "name": "Nitin",
+  "admin": true
+}
+
+###
+POST http://localhost:4000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "test123"
+}
+
+###
+POST http://localhost:4000/auth/signout
+
+###
+GET http://localhost:4000/auth/me
+Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxOGJkNGQyMS0yYjMyLTQ2ZDUtYTVjNy00ZjYwMzUyODExNjgiLCJpYXQiOjE2NDU4NzQyNzcsImV4cCI6MTY0NTk2MDY3N30.V1BMSRm13f2Y0m8p6WoNbOYGt4F1p67PegcMVdMTeZ-YSYmFPeGMA3d2Z09MEYLIN42tRvKoqXlrRvCXtXYxyXvPPqdurzlmmYSmWCUqaIws1yg4xHSsEKCghZb8AGYncHjI55-q26dm_JHu9XrliYsPmQYq1fJu377YQhkrBuU'
+
+# Find user
+
+###
+PATCH  http://localhost:4000/auth/92305e9e-7eb8-4298-9ffc-62f5675852f6
+Content-Type: application/json
+
+{
+  "email": "n12345@gmail.com",
+  "password": "nitin"
+}
